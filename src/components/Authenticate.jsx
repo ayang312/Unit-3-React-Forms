@@ -65,7 +65,7 @@ export default function Authenticate({ token, setToken, username }) {
         </>
       )}
 
-      {/* Show the error message only if it exists */}
+      {/* Show the error message only if it exists. */}
       {error && <p className="error-message">{error}</p>}
 
       <button onClick={handleClick}>Authenticate Token!</button>
