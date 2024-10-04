@@ -1,18 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import SignUpForm from './components/SignUpForm';
+import Authenticate from './components/Authenticate';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState(null);
+  const [username, setUsername] = useState(null);
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
+      <SignUpForm token={token} setToken={setToken} setUsername={setUsername}/>
 
-      </div>
-
+      <Authenticate token={token} setToken={setToken} username={username}/>
     </>
   )
 }
